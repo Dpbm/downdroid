@@ -5,6 +5,12 @@ This python script list and download your required version of android-x86. To ru
 * python3
 * pip (or similar)
 
+## install
+```bash
+    pip install downdroid
+```
+remember to add `~/.local/bin` to `PATH`
+
 ## Commands
 
 | command   | arguments               | 
