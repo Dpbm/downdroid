@@ -39,6 +39,7 @@ if you want to run this by your own, clone this repo and run:
 
 pipenv
 ```
+    pipenv install
     pipenv shell
 ```
 
