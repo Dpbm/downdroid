@@ -1,12 +1,19 @@
-from setuptools import setup, find_packages
+from setuptools import setup
+from pathlib import Path
+
+this_directory = Path(__file__).parent
+long_description = (this_directory/'readme.md').read_text()
 
 setup(
     name='downdroid',
     description='A CLI tool to download android versions',
+    long_description=long_description,
+    long_description_content_type='text/markdown',
     author="Dpbm",
     url="https://github.com/Dpbm/downdroid",
     scripts=["bin/downdroid"],
     license="MIT",
+    readme="readme.md",
     license_files="LICENSE*",
     keywords=[
         "android",
@@ -24,11 +31,11 @@ setup(
         "Operating System :: OS Independent",
     ],
     python_requires=">=3.8",
-    version='0.0.1',
-    packages=find_packages(
-        where='downdroid',
-        include=["downdroid/*"]
-    ),
+    version='0.0.4',
+    packages=[
+        "downdroid",
+        "downdroid.utils",
+    ],
     install_requires=[
         'requests-html',
         'tqdm'
