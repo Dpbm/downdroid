@@ -25,7 +25,10 @@ setup(
     ],
     python_requires=">=3.8",
     version='0.0.1',
-    packages=find_packages(where=['downdroid', 'downdroid/utils']),
+    packages=find_packages(
+        where='downdroid',
+        include=["downdroid/*"]
+    ),
     install_requires=[
         'requests-html',
         'tqdm'
